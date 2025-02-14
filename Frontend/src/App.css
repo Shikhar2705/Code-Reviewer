@@ -27,21 +27,41 @@ main .left, main .right {
 
 main .left {
   background-color: #000000;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
 }
 
-main .left .review{
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+main .left .code {
+  padding-bottom: 1rem;
+}
+
+main .left .review {
+  margin-top: auto;
   background-color: #ff0000b7;
   padding: 0.4rem 2rem;
   font-weight: 500;
   cursor: pointer;
   user-select: none;
   border-radius: 0.2rem;
+  align-self: flex-end; 
 }
 
 main .right {
   background: #464545;
+  overflow: auto;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+main .right::-webkit-scrollbar {
+  display: none;
+}
+
+main .left::-webkit-scrollbar {
+  display: none;
 }
